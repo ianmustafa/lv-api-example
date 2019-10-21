@@ -20,3 +20,5 @@ Route::group(['prefix' => 'auth'], function () {
     Route::post('logout ', 'AuthController@logout');
     Route::get('user ', 'AuthController@user');
 });
+
+Route::apiResource('people', 'PersonController')->except('show');
